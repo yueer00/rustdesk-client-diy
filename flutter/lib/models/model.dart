@@ -1460,6 +1460,7 @@ class FfiModel with ChangeNotifier {
       }
       Map<String, dynamic> features = json.decode(evt['features']);
       _pi.features.privacyMode = features['privacy_mode'] == true;
+      _pi.features.remoteApp = features['remote_app'] == true;
       if (!isCache) {
         handleResolutions(peerId, evt["resolutions"]);
       }
@@ -4508,6 +4509,7 @@ class Resolution {
 
 class Features {
   bool privacyMode = false;
+  bool remoteApp = false;
 }
 
 const kInvalidDisplayIndex = -1;

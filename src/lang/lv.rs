@@ -826,5 +826,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("install-directory-not-empty-tip", "Izvēlētā mape nav tukša. Instalēšana var izdzēst esošos datus. Apsveriet iespēju izvēlēties citu mapi."),
         ("Request approval", "Pieprasīt apstiprinājumu"),
         ("Forever", "Uz visiem laikiem"),
+        ("Remote applications", ""),
+        ("No applications found", ""),
+        ("Fit to window", ""),
+        ("Connection closed", ""),
+        ("Application closed", ""),
+        ("Remote application error", ""),
     ].iter().cloned().collect();
 }

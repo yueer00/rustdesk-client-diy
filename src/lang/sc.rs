@@ -826,5 +826,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("install-directory-not-empty-tip", "Sa cartella seletzionada non est bòida. S'installatzione diat pòdere iscantzellare sos datos chi bi sunt. Ti cussigiamus de isseberare un'àtera cartella."),
         ("Request approval", "Pedi s'aprovatzione"),
         ("Forever", "Pro semper"),
+        ("Remote applications", ""),
+        ("No applications found", ""),
+        ("Fit to window", ""),
+        ("Connection closed", ""),
+        ("Application closed", ""),
+        ("Remote application error", ""),
     ].iter().cloned().collect();
 }

@@ -826,5 +826,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("install-directory-not-empty-tip", "התיקייה שנבחרה אינה ריקה. ההתקנה עלולה למחוק נתונים קיימים. מומלץ לבחור תיקייה אחרת."),
         ("Request approval", "בקש אישור"),
         ("Forever", "לתמיד"),
+        ("Remote applications", ""),
+        ("No applications found", ""),
+        ("Fit to window", ""),
+        ("Connection closed", ""),
+        ("Application closed", ""),
+        ("Remote application error", ""),
     ].iter().cloned().collect();
 }

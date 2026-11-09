@@ -826,5 +826,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("install-directory-not-empty-tip", "Thư mục đã chọn không trống. Quá trình cài đặt có thể xóa dữ liệu hiện có. Hãy cân nhắc chọn một thư mục khác."),
         ("Request approval", "Yêu cầu phê duyệt"),
         ("Forever", "Vĩnh viễn"),
+        ("Remote applications", ""),
+        ("No applications found", ""),
+        ("Fit to window", ""),
+        ("Connection closed", ""),
+        ("Application closed", ""),
+        ("Remote application error", ""),
     ].iter().cloned().collect();
 }

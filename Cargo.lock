@@ -173,7 +173,7 @@ dependencies = [
  "ndk-context",
  "ndk-sys 0.6.0+11769913",
  "num_enum 0.7.2",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -346,7 +346,7 @@ dependencies = [
  "nom",
  "num-traits 0.2.19",
  "rusticata-macros",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "time 0.3.36",
 ]
 
@@ -1021,7 +1021,7 @@ dependencies = [
  "glib 0.18.5",
  "libc",
  "once_cell",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -1046,7 +1046,7 @@ dependencies = [
  "polling 3.7.2",
  "rustix 0.38.34",
  "slab",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -1294,7 +1294,7 @@ dependencies = [
  "rand 0.8.5",
  "serde 1.0.228",
  "serde_derive",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "utf16string",
  "uuid",
  "x11-clipboard 0.8.1",
@@ -1464,7 +1464,7 @@ source = "git+https://github.com/rustdesk-org/confy#83db9ec19a2f97e9718aef69e4fc
 dependencies = [
  "directories-next",
  "serde 1.0.228",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "toml 0.5.11",
 ]
 
@@ -2445,7 +2445,7 @@ dependencies = [
  "lazy_static",
  "serde 1.0.228",
  "serde_derive",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -2523,7 +2523,7 @@ version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06c36cb11dbde389f4096111698d8b567c0720e3452fd5ac3e6b4e47e1939932"
 dependencies = [
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -2765,7 +2765,7 @@ version = "0.8.2"
 source = "git+https://github.com/rustdesk-org/wezterm?branch=rustdesk/pty_based_0.8.1#80174f8009f41565f0fa8c66dab90d4f9211ae16"
 dependencies = [
  "libc",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "winapi 0.3.9",
 ]
 
@@ -2812,7 +2812,7 @@ dependencies = [
  "log",
  "nu-ansi-term",
  "regex",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -3308,7 +3308,7 @@ dependencies = [
  "once_cell",
  "pin-project-lite",
  "smallvec",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -3376,7 +3376,7 @@ dependencies = [
  "memchr",
  "once_cell",
  "smallvec",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -3489,7 +3489,7 @@ dependencies = [
  "once_cell",
  "paste",
  "pretty-hex",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -3725,7 +3725,7 @@ dependencies = [
  "socket2 0.3.19",
  "sodiumoxide",
  "sysinfo",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "tokio-native-tls",
  "tokio-rustls",
@@ -4130,7 +4130,7 @@ dependencies = [
  "rand 0.8.5",
  "rtcp",
  "rtp",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "waitgroup",
  "webrtc-srtp",
@@ -4227,7 +4227,7 @@ dependencies = [
  "combine",
  "jni-sys",
  "log",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "walkdir",
  "windows-sys 0.45.0",
 ]
@@ -4878,7 +4878,7 @@ dependencies = [
  "ndk-sys 0.4.1+23.1.7779620",
  "num_enum 0.5.11",
  "raw-window-handle 0.5.2",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -4892,7 +4892,7 @@ dependencies = [
  "log",
  "ndk-sys 0.5.0+25.2.9519653",
  "num_enum 0.7.2",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -4907,7 +4907,7 @@ dependencies = [
  "ndk-sys 0.6.0+11769913",
  "num_enum 0.7.2",
  "raw-window-handle 0.6.2",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -4978,7 +4978,7 @@ dependencies = [
  "anyhow",
  "byteorder",
  "paste",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -6354,7 +6354,7 @@ dependencies = [
  "bytes",
  "once_cell",
  "protobuf-support",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -6369,7 +6369,7 @@ dependencies = [
  "protobuf-parse",
  "regex",
  "tempfile",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -6384,7 +6384,7 @@ dependencies = [
  "protobuf",
  "protobuf-support",
  "tempfile",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "which",
 ]
 
@@ -6394,7 +6394,7 @@ version = "3.7.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3e36c2f31e0a47f9280fb347ef5e461ffcd2c52dd520d8e216b52f93b0b0d7d6"
 dependencies = [
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -6827,7 +6827,7 @@ checksum = "bd283d9651eeda4b2a83a43c1c91b266c40fd76ecd39a50a8c630ae69dc72891"
 dependencies = [
  "getrandom 0.2.15",
  "libredox",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -6998,7 +6998,7 @@ version = "0.13.0"
 source = "git+https://github.com/rustdesk-org/webrtc?rev=49c89bd8d30e6e62e4c1a96cee38fdc11f79ef63#49c89bd8d30e6e62e4c1a96cee38fdc11f79ef63"
 dependencies = [
  "bytes",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "webrtc-util",
 ]
 
@@ -7012,7 +7012,7 @@ dependencies = [
  "portable-atomic",
  "rand 0.8.5",
  "serde 1.0.228",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "webrtc-util",
 ]
 
@@ -7436,6 +7436,7 @@ dependencies = [
  "tracing",
  "webm",
  "winapi 0.3.9",
+ "windows-capture",
  "zbus",
 ]
 
@@ -7459,7 +7460,7 @@ source = "git+https://github.com/rustdesk-org/webrtc?rev=49c89bd8d30e6e62e4c1a96
 dependencies = [
  "rand 0.8.5",
  "substring",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "url",
 ]
 
@@ -7809,7 +7810,7 @@ dependencies = [
  "log",
  "memmap2",
  "rustix 0.38.34",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "wayland-backend",
  "wayland-client",
  "wayland-csd-frame",
@@ -8036,7 +8037,7 @@ dependencies = [
  "rand 0.8.5",
  "ring",
  "subtle",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "url",
  "webrtc-util",
@@ -8191,7 +8192,7 @@ dependencies = [
  "pkg-config",
  "strum 0.18.0",
  "strum_macros 0.18.0",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "toml 0.5.11",
  "version-compare 0.0.10",
 ]
@@ -8377,11 +8378,11 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "1.0.61"
+version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c546c80d6be4bc6a00c0f01730c08df82eaa7a7a61f11d656526506112cc1709"
+checksum = "b6aaf5339b578ea85b50e080feb250a3e8ae8cfcdff9a461c9ec2904bc923f52"
 dependencies = [
- "thiserror-impl 1.0.61",
+ "thiserror-impl 1.0.69",
 ]
 
 [[package]]
@@ -8395,9 +8396,9 @@ dependencies = [
 
 [[package]]
 name = "thiserror-impl"
-version = "1.0.61"
+version = "1.0.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "46c3384250002a6d5af4d114f2845d37b57521033f30d5c3f46c4d70e1197533"
+checksum = "4fee6c4efc90059e10f81e6d42c60a18f76588c3d74cb83a0b242a2b6c7504c1"
 dependencies = [
  "proc-macro2 1.0.93",
  "quote 1.0.36",
@@ -8922,7 +8923,7 @@ dependencies = [
  "rand 0.8.5",
  "ring",
  "stun",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "tokio-util",
  "webrtc-util",
@@ -9255,7 +9256,7 @@ dependencies = [
  "dirs 5.0.1",
  "enquote",
  "rust-ini",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "winapi 0.3.9",
  "winreg 0.11.0",
 ]
@@ -9592,7 +9593,7 @@ dependencies = [
  "sha2",
  "smol_str",
  "stun",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "time 0.3.36",
  "tokio",
  "turn",
@@ -9616,7 +9617,7 @@ dependencies = [
  "bytes",
  "log",
  "portable-atomic",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "webrtc-sctp",
  "webrtc-util",
@@ -9651,7 +9652,7 @@ dependencies = [
  "sha1",
  "sha2",
  "subtle",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "webrtc-util",
  "x25519-dalek",
@@ -9673,7 +9674,7 @@ dependencies = [
  "serde 1.0.228",
  "serde_json 1.0.118",
  "stun",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "turn",
  "url",
@@ -9690,7 +9691,7 @@ source = "git+https://github.com/rustdesk-org/webrtc?rev=49c89bd8d30e6e62e4c1a96
 dependencies = [
  "log",
  "socket2 0.5.10",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "webrtc-util",
 ]
@@ -9704,7 +9705,7 @@ dependencies = [
  "bytes",
  "rand 0.8.5",
  "rtp",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
 ]
 
 [[package]]
@@ -9719,7 +9720,7 @@ dependencies = [
  "log",
  "portable-atomic",
  "rand 0.8.5",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "webrtc-util",
 ]
@@ -9741,7 +9742,7 @@ dependencies = [
  "rtp",
  "sha1",
  "subtle",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "webrtc-util",
 ]
@@ -9761,7 +9762,7 @@ dependencies = [
  "nix 0.26.4",
  "portable-atomic",
  "rand 0.8.5",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "tokio",
  "winapi 0.3.9",
 ]
@@ -9955,6 +9956,16 @@ dependencies = [
 
 [[package]]
 name = "windows"
+version = "0.58.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dd04d41d93c4992d421894c18c8b43496aa748dd4c081bac0dc93eb0489272b6"
+dependencies = [
+ "windows-core 0.58.0",
+ "windows-targets 0.52.6",
+]
+
+[[package]]
+name = "windows"
 version = "0.61.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c5ee8f3d025738cb02bad7868bbb5f8a6327501e870bf51f1b455b0a2454a419"
@@ -9964,6 +9975,18 @@ dependencies = [
  "windows-future",
  "windows-link 0.1.1",
  "windows-numerics",
+]
+
+[[package]]
+name = "windows-capture"
+version = "1.3.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "83714595cf281ff25fb41cafa3cfbc2e4e5de402824f01a2030ffd1ac675021f"
+dependencies = [
+ "parking_lot",
+ "rayon",
+ "thiserror 1.0.69",
+ "windows 0.58.0",
 ]
 
 [[package]]
@@ -10005,6 +10028,19 @@ dependencies = [
 
 [[package]]
 name = "windows-core"
+version = "0.58.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6ba6d44ec8c2591c134257ce647b7ea6b20335bf6379a27dac5f1641fcf59f99"
+dependencies = [
+ "windows-implement 0.58.0",
+ "windows-interface 0.58.0",
+ "windows-result 0.2.0",
+ "windows-strings 0.1.0",
+ "windows-targets 0.52.6",
+]
+
+[[package]]
+name = "windows-core"
 version = "0.61.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4763c1de310c86d75a878046489e2e5ba02c649d185f21c67d4cf8a56d098980"
@@ -10039,6 +10075,17 @@ dependencies = [
 
 [[package]]
 name = "windows-implement"
+version = "0.58.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2bbd5b46c938e506ecbce286b6628a02171d56153ba733b6c741fc627ec9579b"
+dependencies = [
+ "proc-macro2 1.0.93",
+ "quote 1.0.36",
+ "syn 2.0.98",
+]
+
+[[package]]
+name = "windows-implement"
 version = "0.60.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a47fddd13af08290e67f4acabf4b459f647552718f683a7b415d290ac744a836"
@@ -10053,6 +10100,17 @@ name = "windows-interface"
 version = "0.52.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9d8dc32e0095a7eeccebd0e3f09e9509365ecb3fc6ac4d6f5f14a3f6392942d1"
+dependencies = [
+ "proc-macro2 1.0.93",
+ "quote 1.0.36",
+ "syn 2.0.98",
+]
+
+[[package]]
+name = "windows-interface"
+version = "0.58.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "053c4c462dc91d3b1504c6fe5a726dd15e216ba718e84a0e46a88fbe5ded3515"
 dependencies = [
  "proc-macro2 1.0.93",
  "quote 1.0.36",
@@ -10103,6 +10161,15 @@ dependencies = [
 
 [[package]]
 name = "windows-result"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1d1043d8214f791817bab27572aaa8af63732e11bf84aa21a45a78d6c317ae0e"
+dependencies = [
+ "windows-targets 0.52.6",
+]
+
+[[package]]
+name = "windows-result"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c64fd11a4fd95df68efcfee5f44a294fe71b8bc6a91993e2791938abcc712252"
@@ -10119,6 +10186,16 @@ dependencies = [
  "bitflags 1.3.2",
  "widestring",
  "windows-sys 0.45.0",
+]
+
+[[package]]
+name = "windows-strings"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4cd9b125c486025df0eabcb585e62173c6c9eddcec5d117d3b6e8c30e2ee4d10"
+dependencies = [
+ "windows-result 0.2.0",
+ "windows-targets 0.52.6",
 ]
 
 [[package]]
@@ -10753,7 +10830,7 @@ dependencies = [
  "oid-registry",
  "ring",
  "rusticata-macros",
- "thiserror 1.0.61",
+ "thiserror 1.0.69",
  "time 0.3.36",
 ]
 

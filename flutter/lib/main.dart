@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hbb/common/widgets/overlay.dart';
 import 'package:flutter_hbb/desktop/pages/desktop_tab_page.dart';
 import 'package:flutter_hbb/desktop/pages/install_page.dart';
+import 'package:flutter_hbb/desktop/pages/remote_app_page.dart';
 import 'package:flutter_hbb/desktop/pages/server_page.dart';
 import 'package:flutter_hbb/desktop/screen/desktop_file_transfer_screen.dart';
 import 'package:flutter_hbb/desktop/screen/desktop_view_camera_screen.dart';
@@ -64,6 +65,10 @@ Future<void> main(List<String> args) async {
     switch (kWindowType) {
       case WindowType.RemoteDesktop:
         desktopType = DesktopType.remote;
+        if (argument['remote_app'] == true) {
+          runRemoteAppWindow(argument);
+          break;
+        }
         runMultiWindow(
           argument,
           kAppTypeDesktopRemote,
@@ -115,6 +120,16 @@ Future<void> main(List<String> args) async {
     }
     runMainApp(true);
   }
+}
+
+void runRemoteAppWindow(Map<String, dynamic> argument) async {
+  await initEnv(kAppTypeDesktopRemote);
+  final controller = WindowController.fromWindowId(kWindowId!);
+  await controller.showTitleBar(true);
+  await controller.setPreventClose(true);
+  _runApp(getWindowName(), RemoteAppPage(params: argument),
+      MyTheme.currentThemeMode());
+  await controller.show();
 }
 
 Future<void> initEnv(String appType) async {

@@ -465,6 +465,8 @@ pub struct Connection {
     #[cfg(not(any(target_os = "android", target_os = "ios")))]
     terminal_user_token: Option<TerminalUserToken>,
     terminal_generic_service: Option<Box<GenericService>>,
+    #[cfg(windows)]
+    remote_apps: super::remote_app::Sessions,
 }
 
 impl ConnInner {
@@ -660,6 +662,8 @@ impl Connection {
             #[cfg(not(any(target_os = "android", target_os = "ios")))]
             terminal_user_token: None,
             terminal_generic_service: None,
+            #[cfg(windows)]
+            remote_apps: Default::default(),
             conn_audit_primary_auth: ConnAuditPrimaryAuth::None,
             conn_audit_two_factor: ConnAuditTwoFactor::None,
         };
@@ -804,6 +808,8 @@ impl Connection {
                             log::info!("Change permission {} -> {}", name, enabled);
                             if &name == "keyboard" {
                                 conn.keyboard = enabled;
+                                #[cfg(windows)]
+                                conn.remote_apps.set_input_enabled(conn.peer_keyboard_enabled());
                                 conn.send_permission(Permission::Keyboard, enabled).await;
                                 if let Some(s) = conn.server.upgrade() {
                                     s.write().unwrap().subscribe(
@@ -2097,6 +2103,8 @@ impl Connection {
         pi.sas_enabled = sas_enabled;
         pi.features = Some(Features {
             privacy_mode: privacy_mode::is_privacy_mode_supported(),
+            #[cfg(windows)]
+            remote_app: crate::platform::windows::remote_app::supported(),
             #[cfg(not(any(target_os = "android", target_os = "ios")))]
             terminal,
             ..Default::default()
@@ -3193,6 +3201,11 @@ impl Connection {
                 return true;
             }
             match msg.union {
+                #[cfg(windows)]
+                Some(message::Union::RemoteAppRequest(request)) => {
+                    self.remote_apps.handle(self.inner.clone(), request, self.peer_keyboard_enabled());
+                    self.update_auto_disconnect_timer();
+                }
                 #[allow(unused_mut)]
                 Some(message::Union::MouseEvent(mut me)) => {
                     if self.is_authed_view_camera_conn() {
@@ -5051,6 +5064,8 @@ impl Connection {
         if let Ok(q) = o.disable_keyboard.enum_value() {
             if q != BoolOption::NotSet {
                 self.disable_keyboard = q == BoolOption::Yes;
+                #[cfg(windows)]
+                self.remote_apps.set_input_enabled(self.peer_keyboard_enabled());
                 if let Some(s) = self.server.upgrade() {
                     s.write().unwrap().subscribe(
                         super::clipboard_service::NAME,
@@ -5306,6 +5321,8 @@ impl Connection {
             return;
         }
         self.closed = true;
+        #[cfg(windows)]
+        self.remote_apps.clear();
         // If voice A,B -> C, and A,B has voice call
         // B disconnects, C will reset the voice call input.
         //

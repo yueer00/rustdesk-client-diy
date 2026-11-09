@@ -165,6 +165,11 @@ class RustdeskImpl {
     ]);
   }
 
+  Stream<EventToUI> sessionRemoteAppStart(
+      {required UuidValue sessionId, required String id, dynamic hint}) {
+    throw UnsupportedError('Remote apps are only supported on Windows desktop');
+  }
+
   Stream<EventToUI> sessionStart(
       {required UuidValue sessionId, required String id, dynamic hint}) {
     js.context.callMethod('setByName', [
@@ -543,6 +548,18 @@ class RustdeskImpl {
       {required UuidValue sessionId, required String value, dynamic hint}) {
     return Future(
         () => js.context.callMethod('setByName', ['input_string', value]));
+  }
+
+  Future<void> sessionRemoteAppRequest(
+      {required UuidValue sessionId, required String request, dynamic hint}) {
+    return Future.error(
+        UnsupportedError('Remote apps are only supported on Windows desktop'));
+  }
+
+  Future<void> sessionRemoteAppClose(
+      {required UuidValue sessionId, dynamic hint}) {
+    return Future.error(
+        UnsupportedError('Remote apps are only supported on Windows desktop'));
   }
 
   Future<void> sessionSendChat(

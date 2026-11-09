@@ -715,6 +715,31 @@ pub fn session_send_chat(session_id: SessionID, text: String) {
     }
 }
 
+pub fn session_remote_app_start(
+    events2ui: StreamSink<EventToUI>,
+    session_id: SessionID,
+    id: String,
+) -> ResultType<()> {
+    session_start_(&session_id, &id, events2ui)?;
+    if let Some(session) = sessions::get_session_by_session_id(&session_id) {
+        session.push_event_to::<&str>("remote_app_ready", &[], &[&session_id]);
+    }
+    Ok(())
+}
+
+pub fn session_remote_app_request(session_id: SessionID, request: String) {
+    if let Err(e) = crate::remote_app::request(&session_id, &request) {
+        crate::remote_app::local_error(&session_id, &e.to_string());
+    }
+}
+
+pub fn session_remote_app_close(session_id: SessionID) {
+    if let Some(session) = sessions::get_session_by_session_id(&session_id) {
+        session.close_remote_app_event_stream(session_id);
+    }
+    session_close(session_id);
+}
+
 // Terminal functions
 pub fn session_open_terminal(session_id: SessionID, terminal_id: i32, rows: u32, cols: u32) {
     if let Some(session) = sessions::get_session_by_session_id(&session_id) {

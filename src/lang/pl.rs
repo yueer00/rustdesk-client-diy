@@ -826,5 +826,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("install-directory-not-empty-tip", "Wybrany folder nie jest pusty. Instalacja może usunąć istniejące dane. Rozważ wybranie innego folderu."),
         ("Request approval", "Poproś o zatwierdzenie"),
         ("Forever", "Na zawsze"),
+        ("Remote applications", ""),
+        ("No applications found", ""),
+        ("Fit to window", ""),
+        ("Connection closed", ""),
+        ("Application closed", ""),
+        ("Remote application error", ""),
     ].iter().cloned().collect();
 }

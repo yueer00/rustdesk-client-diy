@@ -21,6 +21,7 @@ import '../../common.dart';
 import '../../models/model.dart';
 import '../../models/platform_model.dart';
 import '../../common/shared_state.dart';
+import '../pages/remote_app_page.dart';
 import './popup_menu.dart';
 import './kb_layout_type_chooser.dart';
 import 'package:flutter_hbb/utils/scale.dart';
@@ -847,6 +848,22 @@ class _RemoteToolbarState extends State<RemoteToolbar> {
       toolbarItems.add(_KeyboardMenu(id: widget.id, ffi: widget.ffi));
     }
     toolbarItems.add(_ChatMenu(id: widget.id, ffi: widget.ffi));
+    if (isWindows && pi.isSet.isTrue &&
+        pi.platform == kPeerPlatformWindows && pi.features.remoteApp) {
+      toolbarItems.add(Semantics(
+        button: true,
+        label: translate('Remote applications'),
+        onTap: () => showRemoteApps(context, widget.ffi),
+        excludeSemantics: true,
+        child: _IconMenuButton(
+          icon: const Icon(Icons.web_asset, color: Colors.white),
+          tooltip: 'Remote applications',
+          color: _ToolbarTheme.inactiveColor,
+          hoverColor: _ToolbarTheme.hoverInactiveColor,
+          onPressed: () => showRemoteApps(context, widget.ffi),
+        ),
+      ));
+    }
     if (!isWeb) {
       toolbarItems.add(_VoiceCallMenu(id: widget.id, ffi: widget.ffi));
     }

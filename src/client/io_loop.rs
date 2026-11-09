@@ -2265,6 +2265,10 @@ impl<T: InvokeUiSession> Remote<T> {
                         _ => {}
                     }
                 }
+                #[cfg(feature = "flutter")]
+                Some(message::Union::RemoteAppResponse(response)) => {
+                    crate::remote_app::response(&self.handler.lc, response);
+                }
                 Some(message::Union::Misc(misc)) => match misc.union {
                     Some(misc::Union::AudioFormat(f)) => {
                         self.audio_sender.send(MediaData::AudioFormat(f)).ok();

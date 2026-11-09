@@ -55,6 +55,8 @@ pub mod aom;
 #[cfg(not(any(target_os = "ios")))]
 pub mod camera;
 pub mod record;
+#[cfg(all(windows, feature = "window-capture"))]
+pub mod window_capture;
 mod vpx;
 
 #[repr(usize)]

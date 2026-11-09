@@ -104,6 +104,7 @@ message Features {
   bool privacy_mode = 1;
   bool terminal = 2;
   bool port_forward_mux = 3;
+  bool remote_app = 4;
 }
 
 message CodecAbility {
@@ -1002,6 +1003,65 @@ message PortForwardChannel {
   }
 }
 
+message RemoteAppWindow {
+  uint64 id = 1;
+  string title = 2;
+  uint32 width = 3;
+  uint32 height = 4;
+}
+
+message RemoteAppWindows { repeated RemoteAppWindow windows = 1; }
+
+message RemoteAppPointer {
+  uint32 kind = 1;
+  uint32 button = 2;
+  sint32 x = 3;
+  sint32 y = 4;
+  sint32 scroll_x = 5;
+  sint32 scroll_y = 6;
+}
+
+message RemoteAppKey {
+  uint32 virtual_key = 1;
+  bool down = 2;
+  string text = 3;
+}
+
+message RemoteAppRequest {
+  string app_id = 1;
+  uint64 frame_id = 2;
+  uint64 layout_id = 11;
+  oneof union {
+    bool list = 3;
+    uint64 start = 4;
+    bool stop = 5;
+    RemoteAppPointer pointer = 6;
+    RemoteAppKey key = 7;
+    Resolution resize = 8;
+    bool ack = 9;
+    bool release = 10;
+  }
+}
+
+message RemoteAppFrame {
+  uint64 frame_id = 1;
+  uint32 width = 2;
+  uint32 height = 3;
+  bytes jpeg = 4;
+  string title = 5;
+  uint64 layout_id = 6;
+}
+
+message RemoteAppResponse {
+  string app_id = 1;
+  oneof union {
+    RemoteAppWindows windows = 2;
+    RemoteAppFrame frame = 3;
+    string error = 4;
+    bool closed = 5;
+  }
+}
+
 message Message {
   oneof union {
     SignedId signed_id = 3;
@@ -1037,5 +1097,7 @@ message Message {
     PortForwardChannel port_forward_channel = 33;
     // Auto Login: the peer types the password only if it is at its logon or lock screen.
     OSLogin os_login = 34;
+    RemoteAppRequest remote_app_request = 35;
+    RemoteAppResponse remote_app_response = 36;
   }
 }

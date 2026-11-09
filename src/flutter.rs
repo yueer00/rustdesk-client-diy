@@ -629,6 +629,20 @@ impl FlutterHandler {
         }
     }
 
+    pub(crate) fn close_remote_app_event_stream(&self, session_id: SessionID) {
+        let stream = self
+            .session_handlers
+            .write()
+            .unwrap()
+            .get_mut(&session_id)
+            .and_then(|session| session.event_stream.take());
+        if let Some(stream) = stream {
+            if !stream.close() {
+                log::trace!("Remote application event stream could not be closed or was already closed");
+            }
+        }
+    }
+
     fn make_displays_msg(displays: &Vec<DisplayInfo>) -> String {
         let mut msg_vec = Vec::new();
         for ref d in displays.iter() {
@@ -902,6 +916,7 @@ impl InvokeUiSession for FlutterHandler {
         let mut features: HashMap<&str, bool> = Default::default();
         for ref f in pi.features.iter() {
             features.insert("privacy_mode", f.privacy_mode);
+            features.insert("remote_app", f.remote_app);
         }
         // compatible with 1.1.9
         if get_version_number(&pi.version) < get_version_number("1.2.0") {

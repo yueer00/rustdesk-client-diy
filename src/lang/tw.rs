@@ -826,5 +826,11 @@ pub static ref T: std::collections::HashMap<&'static str, &'static str> =
         ("install-directory-not-empty-tip", "所選資料夾不是空的。安裝可能刪除現有資料。建議選擇其他資料夾。"),
         ("Request approval", "請求批准"),
         ("Forever", "永久"),
+        ("Remote applications", "遠端應用程式"),
+        ("No applications found", "找不到應用程式"),
+        ("Fit to window", "符合視窗大小"),
+        ("Connection closed", "連線已關閉"),
+        ("Application closed", "應用程式已關閉"),
+        ("Remote application error", "遠端應用程式錯誤"),
     ].iter().cloned().collect();
 }
